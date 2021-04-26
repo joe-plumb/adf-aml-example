@@ -7,29 +7,6 @@
       "subscriptionId": "29f97392-4349-4e87-9ad4-35ae6c1ec2e7",
       "resourceGroupName": "eaml-dev-westeurope-by644x",
       "mlWorkspaceName": "eaml-ws-dev-westeurope-by644x",
-      "servicePrincipalId": "",
-      "servicePrincipalKey": {
-        "type": "AzureKeyVaultSecret",
-        "store": {
-          "referenceName": "AzureKeyVault1",
-          "type": "LinkedServiceReference"
-        },
-        "secretName": "eamlws"
-      },
-      "tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "appId": "244114e1-2dcf-4d3f-974e-01e8c1b736eb"
-    }
-  }
-}
-{
-  "name": "AzureMLService1",
-  "properties": {
-    "annotations": [],
-    "type": "AzureMLService",
-    "typeProperties": {
-      "subscriptionId": "29f97392-4349-4e87-9ad4-35ae6c1ec2e7",
-      "resourceGroupName": "eaml-dev-westeurope-by644x",
-      "mlWorkspaceName": "eaml-ws-dev-westeurope-by644x",
       "servicePrincipalId": "244114e1-2dcf-4d3f-974e-01e8c1b736eb",
       "servicePrincipalKey": {
         "type": "AzureKeyVaultSecret",
