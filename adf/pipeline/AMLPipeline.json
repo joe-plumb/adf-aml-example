@@ -17,9 +17,9 @@
 				"typeProperties": {
 					"experimentName": "testexperiment",
 					"mlPipelineParameters": {
-						"pipeline_arg": "\"hello from ADF\""
+						"pipeline_arg": "hello from ADF"
 					},
-					"mlPipelineId": "d83be93f-3814-4490-aea6-4913dd355dbb"
+					"mlPipelineId": "f1c00ef3-3909-42f4-b1cc-c4f3e287f849"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureMLService1",
