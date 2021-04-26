@@ -43,13 +43,13 @@ resource "azurerm_data_factory" "adf" {
     type = "SystemAssigned"
   }
 
-#   github_configuration {
-#             account_name    = "joe-plumb"
-#             branch_name     = "main" 
-#             git_url    = "https://github.com"
-#             repository_name = "adf-aml-example" 
-#             root_folder     = "/adf"
-#   }
+  github_configuration {
+            account_name    = "joe-plumb"
+            branch_name     = "main" 
+            git_url    = "https://github.com"
+            repository_name = "adf-aml-example" 
+            root_folder     = "/adf"
+  }
 
 }
 
