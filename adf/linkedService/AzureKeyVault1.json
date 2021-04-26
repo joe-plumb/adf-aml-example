@@ -1,0 +1,13 @@
+{
+  "name": "AzureKeyVault1",
+  "properties": {
+    "annotations": [],
+    "type": "AzureKeyVault",
+    "typeProperties": {
+      "baseUrl": ""
+    }
+  },
+  "typeProperties": {
+    "baseUrl": "https://eamldevweuby644x.vault.azure.net/"
+  }
+}
