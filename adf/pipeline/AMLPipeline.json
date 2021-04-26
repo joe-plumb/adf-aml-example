@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"experimentName": "test_experiment",
+					"experimentName": "testexperiment",
 					"mlPipelineParameters": {
 						"pipeline_arg": "hello from ADF"
 					},
