@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # checkout adf-update branch
-# git checkout -b adf-objects-update
+git checkout -b adf-objects-update
 
 # update local adf files 
 ## update key vault linked service defintion
