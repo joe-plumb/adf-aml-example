@@ -1,0 +1,22 @@
+{
+    "name": "AzureMLService1",
+    "properties": {
+        "annotations": [],
+        "type": "AzureMLService",
+        "typeProperties": {
+            "subscriptionId": "",
+            "resourceGroupName": "",
+            "mlWorkspaceName": "",
+            "servicePrincipalId": "",
+            "servicePrincipalKey": {
+                "type": "AzureKeyVaultSecret",
+                "store": {
+                    "referenceName": "AzureKeyVault1",
+                    "type": "LinkedServiceReference"
+                },
+                "secretName": "eamlws"
+            },
+            "tenant": ""
+        }
+    }
+}
