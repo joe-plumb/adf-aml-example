@@ -87,7 +87,6 @@ resource "azurerm_key_vault" "kv" {
       "get", "list", "set"
     ]
   }
-
 }
 
 resource "azurerm_storage_account" "example" {
@@ -110,6 +109,25 @@ resource "azurerm_machine_learning_workspace" "example" {
     type = "SystemAssigned"
   }
 }
+
+resource "null_resource" "compute_resouces" {
+  provisioner "local-exec" {
+    command="az ml computetarget create amlcompute --max-nodes 1 --min-nodes 0 --name cpu-cluster --vm-size Standard_DS3_v2 --idle-seconds-before-scaledown 600 --assign-identity [system] --resource-group ${azurerm_machine_learning_workspace.example.resource_group_name} --workspace-name ${azurerm_machine_learning_workspace.example.name}"
+  }
+  depends_on = [azurerm_machine_learning_workspace.example]
+}
+
+resource "azurerm_key_vault_access_policy" "aml_access" {
+  key_vault_id = azurerm_key_vault.kv.id
+  tenant_id = data.azurerm_client_config.current.tenant_id
+  object_id = azurerm_machine_learning_workspace.example.identity.0.principal_id
+  
+  secret_permissions = [
+      "get", "list", "set"
+    ]
+depends_on = [azurerm_key_vault.kv]
+}
+
 
 # Service Principal for ADF AML Linked Service 
 resource "random_password" "password" {

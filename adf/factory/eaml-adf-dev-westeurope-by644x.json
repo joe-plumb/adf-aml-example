@@ -1,0 +1,12 @@
+{
+  "name": "eaml-adf-dev-westeurope-by644x",
+  "properties": {
+    "globalParameters": {
+      "environment": {
+        "type": "string",
+        "value": "dev"
+      }
+    }
+  },
+  "location": "westeurope"
+}

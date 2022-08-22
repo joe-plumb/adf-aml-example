@@ -1,0 +1,32 @@
+{
+	"name": "AMLPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Machine Learning Execute Pipeline1",
+				"type": "AzureMLExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"experimentName": "testexperiment",
+					"mlPipelineParameters": {
+						"pipeline_arg": "hello from ADF"
+					},
+					"mlPipelineId": "f1c00ef3-3909-42f4-b1cc-c4f3e287f849"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureMLService1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
